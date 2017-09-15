@@ -1,7 +1,26 @@
-<div class="color">
-	<div class="saturation">
-		<div class="value">
-
+<div class="color-picker">
+	<div class="container-fluid">
+		<div class="control">
+			<div #selector class="selector">
+				<div class="hue">
+					<div class="saturation">
+						<div #cursor class="cursor">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="control">
+			<div class="luminance">
+				<input #luminance type="range" min="0" max="100" value="50">
+			</div>
+		</div>
+		<div class="control">
+			<div class="alpha">
+				<input #alpha type="range" min="0" max="255" value="255">
+			</div>
 		</div>
 	</div>
 </div>
+
+<input type="color">

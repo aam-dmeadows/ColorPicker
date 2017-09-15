@@ -1,17 +1,73 @@
-.color {
-	background: rgb(28, 149, 150);
-	width: 100px;
-	height: 100px;
+.color-picker {
+	width: 300px;
+}
+
+div.control:not(:first-child) {
+	margin-top: 10px;
+}
+
+div.selector {
+	height: 250px;
+}
+
+.hue, .saturation, .luminance {
+	width: 100%;
+	height: 100%;
+}
+
+.hue {
+	background: linear-gradient(
+		to right,
+		rgb(255, 0, 0),
+		rgb(255, 255, 0),
+		rgb(0, 255, 0),
+		rgb(0, 255, 255),
+		rgb(0, 0, 255),
+		rgb(255, 0, 255),
+		rgb(255, 0, 0)
+	);
 }
 
 .saturation {
-	background: linear-gradient(to right, #fff, rgba(204, 154, 129, 0));
-	width: 100%;
-	height: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(133, 133, 133));
 }
 
-.value {
-	background: linear-gradient(to top, #000, rgba(204, 154, 129, 0));
-	width: 100%;
-	height: 100%;
+.cursor {
+	position: relative;
+	background: white;
+	border-radius: 50%;
+	border-style: solid;
+	border-color: gray;
+	border-width: 2px;
+	width: 15px;
+	height: 15px;
 }
+
+.luminance {
+	background: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 0, 0));
+}
+
+.alpha {
+	background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(255, 0, 0));
+	margin-top: 10px;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	background: transparent;
+	outline: none;
+	height: 100%;
+	width: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	-webkit-appearance: none;
+	background: transparent;
+	color: transparent;
+	border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: sliderthumb-horizontal;
+}
+
